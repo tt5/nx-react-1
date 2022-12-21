@@ -9,5 +9,13 @@
   }
   a {
     @apply underline;
+  border: transparent 1px solid;
+  padding: 0px 0.5rem;
   }
+}
+
+nav a.active {
+  text-decoration: none;
+  border-top: 1px solid;
+  padding: 0px 0.5rem;
 }

@@ -1,5 +1,5 @@
 import { Nav } from '@first/shared/ui';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 /* eslint-disable-next-line */
 export interface HomeProps {}
@@ -8,8 +8,8 @@ export function Home(props: HomeProps) {
   return (
     <>
       <Nav>
-        <Link className="font-bold no-underline" to="/">Home</Link>
-        <Link to="/about">About</Link>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/about">About</NavLink>
       </Nav>
       Home
     </>

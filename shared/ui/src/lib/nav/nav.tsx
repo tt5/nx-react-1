@@ -7,7 +7,7 @@ export function Nav(props: NavProps) {
   return (
     <div className="px-4 py-2 flex bg-blue-600 text-white justify-between">
       <Banner />
-      <div className="flex gap-4 w-20">{props.children}</div>
+      <nav className="flex gap-4 w-20">{props.children}</nav>
       <div></div>
     </div>
   );
