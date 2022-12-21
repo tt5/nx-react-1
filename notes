@@ -3,8 +3,13 @@ px create-nx-workspace@latest
 cd first
 npx nx g @nrwl/react:component home
 npx nx g @nrwl/react:library about
+(none)
 npx nx g @nrwl/react:lib shared/ui
 npm i react-router-dom
 npx nx g @nrwl/react:component banner --project=shared-ui --export
 npx nx lint shared-ui
 
+nx g @nrwl/react:setup-tailwind --project=first
+
+npm install -D eslint eslint-plugin-tailwindcss
+npx nx lint shared-ui --fix

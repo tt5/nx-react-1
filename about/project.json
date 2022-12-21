@@ -12,18 +12,6 @@
         "lintFilePatterns": ["about/**/*.{ts,tsx,js,jsx}"]
       }
     },
-    "build": {
-      "executor": "@nrwl/vite:build",
-      "outputs": ["{options.outputPath}"],
-      "defaultConfiguration": "production",
-      "options": {
-        "outputPath": "dist/about"
-      },
-      "configurations": {
-        "development": {},
-        "production": {}
-      }
-    },
     "test": {
       "executor": "@nrwl/vite:test",
       "outputs": ["{projectRoot}/coverage"],

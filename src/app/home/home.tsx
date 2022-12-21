@@ -1,16 +1,18 @@
-import { Banner } from '@first/shared/ui';
+import { Nav } from '@first/shared/ui';
 import { Link } from 'react-router-dom';
-import styles from './home.module.css';
 
 /* eslint-disable-next-line */
 export interface HomeProps {}
 
 export function Home(props: HomeProps) {
   return (
-    <div className={styles['container']}>
-      <Banner />
-      <Link to="/about">About</Link>
-    </div>
+    <>
+      <Nav>
+        <Link className="font-bold no-underline" to="/">Home</Link>
+        <Link to="/about">About</Link>
+      </Nav>
+      Home
+    </>
   );
 }
 

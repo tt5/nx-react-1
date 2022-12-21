@@ -1,17 +1,19 @@
-import { Banner } from '@first/shared/ui';
+import { Nav } from '@first/shared/ui';
 import { Link } from 'react-router-dom';
-import styles from './about.module.css';
 
 /* eslint-disable-next-line */
-export interface RoutesAboutProps {}
+export interface AboutProps {}
 
-export function RoutesAbout(props: RoutesAboutProps) {
+export function About(props: AboutProps) {
   return (
-    <div className={styles['container']}>
-      <Banner />
-      <Link to="/">Home</Link>
-    </div>
+    <>
+      <Nav>
+        <Link to="/">Home</Link>
+        <Link className="no-underline font-bold" to="/about">About</Link>
+      </Nav>
+      <Link to="/">About</Link>
+    </>
   );
 }
 
-export default RoutesAbout;
+export default About;
