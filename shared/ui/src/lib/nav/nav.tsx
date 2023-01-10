@@ -1,15 +1,21 @@
 import { Banner } from '@first/shared/ui';
+import { NavLink, Outlet } from 'react-router-dom';
 
-/* eslint-disable-next-line */
-export interface NavProps {}
-
-export function Nav(props: NavProps) {
+export function Nav() {
   return (
-    <div className="px-4 py-2 flex bg-blue-600 text-white justify-between">
-      <Banner />
-      <nav className="flex gap-4 w-20">{props.children}</nav>
-      <div></div>
-    </div>
+    <>
+      <header className="px-4 py-2 flex bg-blue-600 text-white justify-between">
+        <Banner />
+        <nav className="flex gap-4 w-20">
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/about">About</NavLink>
+        </nav>
+        <div></div>
+      </header>
+      <main>
+        <Outlet />
+      </main>
+    </>
   );
 }
 
