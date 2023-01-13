@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@first/about": ["about/src/index.ts"],
+      "@first/help": ["help/src/index.ts"],
       "@first/shared/ui": ["shared/ui/src/index.ts"]
     }
   },

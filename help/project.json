@@ -1,0 +1,24 @@
+{
+  "name": "help",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "help/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["help/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/vite:test",
+      "outputs": ["coverage/help"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../coverage/help"
+      }
+    }
+  }
+}
