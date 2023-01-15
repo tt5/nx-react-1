@@ -1,7 +1,7 @@
 export function Home() {
   return (
     <>
-      Home
+      Home2
     </>
   );
 }
