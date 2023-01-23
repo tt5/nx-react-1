@@ -14,3 +14,5 @@ nx g @nrwl/react:setup-tailwind --project=first
 npm install -D eslint eslint-plugin-tailwindcss
 npx nx lint shared-ui --fix
 npx nx g @nrwl/react:component faq --project=help --export
+npm i -g json-server
+json-server -p 4000 -w ./data/posts.json

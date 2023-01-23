@@ -1,0 +1,24 @@
+{
+  "name": "blog",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "blog/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["blog/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/vite:test",
+      "outputs": ["coverage/blog"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../coverage/blog"
+      }
+    }
+  }
+}
