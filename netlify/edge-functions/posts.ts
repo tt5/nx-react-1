@@ -1,22 +1,17 @@
 import type { Context } from "netlify:edge";
 
 export default async (request: Request, context: Context) => {
-  return Response.json({
-    posts: [
-      {
-        id: 1,
-        title: 'first',
-      },
-      {
-        id: 2,
-        title: 'second',
-      },
-      {
-        id: 3,
-        title: 'third',
-      },
-    ],
-  });
+  const url = new URL(request.url);
+  const urlString = url.toString()
+  const baseUrl = urlString.substring(0, urlString.lastIndexOf('/'));
+  const data = await fetch(baseUrl + '/dataposts.json')
+  const posts = await data.json()
+  const id = url.searchParams.get("id");
+  if (id) {
+    return Response.json(posts.posts[id-1])
+  }
+
+  return Response.json(posts)
 }
 
 export const config = {

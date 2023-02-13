@@ -1,6 +1,6 @@
 import { About } from '@first/about';
 import { Help, Faq, Contact } from '@first/help';
-import { Blog, Posts, postsLoader } from '@first/blog';
+import { Blog, Post, postLoader, Posts, postsLoader } from '@first/blog';
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -25,6 +25,11 @@ const router = createBrowserRouter(
         index
         element={<Posts />}
         loader={postsLoader}
+        />
+        <Route
+          path=":id"
+          element={<Post/>}
+          loader={postLoader}
         />
       </Route>
       <Route path="*" element={<NotFound />}/>

@@ -1,18 +1,17 @@
-px create-nx-workspace@latest
-(...)
-cd first
-npx nx g @nrwl/react:component home
-npx nx g @nrwl/react:library about
+npx nx g component home
+npx nx g lib about
 (none)
-npx nx g @nrwl/react:lib shared/ui
+npx nx g lib shared/ui
 npm i react-router-dom
-npx nx g @nrwl/react:component banner --project=shared-ui --export
+npx nx g component banner --project=shared-ui --export
 npx nx lint shared-ui
 
-nx g @nrwl/react:setup-tailwind --project=first
+nx g setup-tailwind --project=first
 
 npm install -D eslint eslint-plugin-tailwindcss
 npx nx lint shared-ui --fix
-npx nx g @nrwl/react:component faq --project=help --export
+npx nx g component faq --project=help --export
 npm i -g json-server
 json-server -p 4000 -w ./data/posts.json
+
+netlify dev

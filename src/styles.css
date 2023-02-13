@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 @tailwind components;
 @tailwind base;
 @tailwind utilities;
 /* You can add global styles to this file, and also import other style files */
 
+
 @layer base {
   html {
-    @apply bg-cyan-100;
+    @apply bg-a-bg;
   }
   a {
   border: transparent 1px solid;

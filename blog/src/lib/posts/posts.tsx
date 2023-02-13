@@ -9,7 +9,7 @@ export function Posts(props: PostsProps) {
   return (
     <div className="flex flex-col">
       {posts.posts.map((post: any) => (
-        <Link className="underline" to="/" key={post.id}>
+        <Link className="underline" to={post.id.toString()} key={post.id}>
           {post.title}
         </Link>
       ))}
