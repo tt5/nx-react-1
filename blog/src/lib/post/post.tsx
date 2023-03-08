@@ -18,7 +18,12 @@ export const postLoader = async ({params}: any) => {
   const {id} = params
 
   const res = await fetch('/posts?id=' + id)
-  return res.json()
+
+  const resjson = await res.json().catch(e => {
+    throw Error('Could not find post')
+  })
+
+  return resjson
   
 }
 

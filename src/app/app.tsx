@@ -1,4 +1,5 @@
 import { About } from '@first/about';
+import { Error } from '@first/blog';
 import { Help, Faq, Contact } from '@first/help';
 import { Blog, Post, postLoader, Posts, postsLoader } from '@first/blog';
 import {
@@ -20,7 +21,11 @@ const router = createBrowserRouter(
         <Route path="faq" element={<Faq />}/>
         <Route path="contact" element={<Contact />}/>
       </Route>
-      <Route path="blog" element={<Blog />}>
+      <Route
+        path="blog"
+        element={<Blog />}
+        errorElement={<Error />}
+      >
         <Route
         index
         element={<Posts />}
@@ -28,7 +33,7 @@ const router = createBrowserRouter(
         />
         <Route
           path=":id"
-          element={<Post/>}
+          element={<Post />}
           loader={postLoader}
         />
       </Route>

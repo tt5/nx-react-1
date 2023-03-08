@@ -20,5 +20,9 @@ export function Posts(props: PostsProps) {
 export const postsLoader = async () => {
   const res = await fetch('/posts')
 
+  if (!res.ok) {
+    throw Error('Could not fetch the posts')
+  }
+
   return res.json()
 }
