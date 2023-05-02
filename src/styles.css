@@ -15,7 +15,12 @@
 }
 
 nav a.active {
+  @apply text-orange-900 bg-a-bg;
   text-decoration: none;
-  border-top: 2px solid;
+  padding: 0px 0.5rem;
+}
+
+nav a {
+  text-decoration: none;
   padding: 0px 0.5rem;
 }

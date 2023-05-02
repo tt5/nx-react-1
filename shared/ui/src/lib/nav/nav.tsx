@@ -1,4 +1,4 @@
-import { Banner } from '@first/shared/ui';
+import { Banner, Breadcrumbs } from '@first/shared/ui';
 import { NavLink, Outlet } from 'react-router-dom';
 
 export function Nav() {
@@ -20,7 +20,7 @@ export function Nav() {
             Blog
           </NavLink>
         </nav>
-        <div></div>
+        <Breadcrumbs />
       </header>
       <main className="font-a p-4">
         <Outlet />
