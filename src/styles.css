@@ -24,3 +24,27 @@ nav a {
   text-decoration: none;
   padding: 0px 0.5rem;
 }
+
+.status {
+  @apply bg-neutral-300;
+}
+
+.PLANNED {
+  @apply bg-neutral-300;
+}
+
+.ONGOING {
+  @apply bg-orange-200;
+}
+
+.DONE {
+  @apply bg-green-200;
+}
+
+button {
+  @apply border border-neutral-200 border-2 p-1 bg-neutral-100;
+}
+
+.drop {
+  @apply border border-black;
+}

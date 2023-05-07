@@ -1,6 +1,6 @@
-const { createGlobPatternsForDependencies } = require('@nrwl/react/tailwind');
+const { createGlobPatternsForDependencies } = require('@nx/react/tailwind');
 const { join } = require('path');
-const { fontFamily } = require("tailwindcss/defaultTheme")
+const { fontFamily } = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -15,14 +15,13 @@ module.exports = {
     extend: {
       colors: {
         a: {
-          bg: "#ecfeff", //cyan-50 
-          a: "#3B82F6", //sky-500 
-        }
+          bg: '#ecfeff', //cyan-50
+          a: '#3B82F6', //sky-500
+        },
       },
       fontFamily: {
-        a: ["Lato", ...fontFamily.sans],
-      }
-
+        a: ['Lato', ...fontFamily.sans],
+      },
     },
   },
   plugins: [],

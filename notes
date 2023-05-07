@@ -16,3 +16,4 @@ json-server -p 4000 -w ./data/posts.json
 
 netlify dev
 npm install netlify-cli -g
+npx nx migrate latest
