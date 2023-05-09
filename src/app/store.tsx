@@ -1,12 +1,15 @@
 import {create} from 'zustand'
 import {devtools, persist} from 'zustand/middleware'
+import {produce} from 'immer'
 
 const store = (set: any) => ({
   tasks: [{title: 'testTask', state: 'ONGOING'}],
   draggedTask: null,
   addTask: (title: any, state: any) =>
     set(
-      (store: any) => ({tasks: [...store.tasks, {title, state}] }),
+      produce((store: any) => {
+        store.tasks.push({title, state})
+      }),
       false,
       'addTask'
     ),
