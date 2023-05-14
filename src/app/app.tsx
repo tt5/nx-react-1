@@ -1,6 +1,6 @@
 import { About } from '@first/about';
 import { Error } from '@first/blog';
-import { Help, Faq, Contact } from '@first/help';
+import { Help, Faq, Contact, contactAction } from '@first/help';
 import { Blog, Post, postLoader, Posts, postsLoader } from '@first/blog';
 import {
   createBrowserRouter,
@@ -19,7 +19,7 @@ const router = createBrowserRouter(
       <Route path="about" element={<About />} />
       <Route path="help" element={<Help />}>
         <Route path="faq" element={<Faq />}/>
-        <Route path="contact" element={<Contact />}/>
+        <Route path="contact" element={<Contact />} action={contactAction}/>
       </Route>
       <Route
         path="blog"
